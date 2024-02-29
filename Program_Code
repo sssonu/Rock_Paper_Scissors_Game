@@ -1,0 +1,82 @@
+import java.util.Scanner;
+import java.util.Random;
+public class RockPaperScissors_Game {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        Random rand = new Random();
+        System.out.println("WELCOME !!! ");
+        for(int i=1;i<=5;i++){
+            System.out.printf("ROUND:- %d ",i);
+            System.out.println("\n");
+            System.out.print("Press 1 for Rock \nPress 2 for Paper \nPress 3 for Scissors ");
+            byte user=sc.nextByte();
+            if(user==1){
+                System.out.println("Your choice is ROCK");
+            }
+            else if(user==2){
+                System.out.println("Your choice is PAPER");
+            }
+            else if(user==3){
+                System.out.println("Your choice Scissors");
+            }
+            else{
+                System.out.println("WARNING !!! INVALID INPUT ");
+            }
+            int Computer= rand.nextInt(1,4);
+
+            switch(Computer){
+                case 1:
+                    System.out.println("Computer choice is Rock");
+                    break;
+                case 2:
+                    System.out.println("Computer choice is Paper");
+                    break;
+                case 3:
+                    System.out.println(" Computer choice is Scissors ");
+                    break;
+                default:
+                    System.out.println("Error");
+            }
+
+            if((Computer==1) && (user ==1)){
+                System.out.println("Tie");
+                System.out.println("=====================================================");
+            }
+            else if((Computer==2) && (user==2)){
+                System.out.println("Tie");
+                System.out.println("=====================================================");
+            }
+            else if((Computer==3) && (user==3)){
+                System.out.println("Tie");
+                System.out.println("=====================================================");
+            }
+            else if((Computer==1) && (user==2)){
+                System.out.println("You Won");
+                System.out.println("=====================================================");
+            }
+            else if((Computer==1) && (user==3)){
+                System.out.println("Computer Won");
+                System.out.println("=====================================================");
+            }
+            else if((Computer==2) && (user==1)){
+                System.out.println("Computer Won");
+                System.out.println("=====================================================");
+            }
+            else if((Computer==2) && (user==3)){
+                System.out.println("You Won");
+                System.out.println("=====================================================");
+            }
+            else if((Computer==3) && (user==1)){
+                System.out.println("You Won");
+                System.out.println("=====================================================");
+            }
+            else {
+                System.out.println("Computer Won");
+                System.out.println("=====================================================");
+            }
+
+        }
+
+
+    }
+}
